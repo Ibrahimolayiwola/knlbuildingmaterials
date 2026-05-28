@@ -1,126 +1,67 @@
-import { FiArrowRight } from "react-icons/fi";
 import { RiArrowDropRightLine } from "react-icons/ri";
-import { Button } from "./ui/button";
-import { useStateContext } from "../context/StateContext";
-import {motion} from "framer-motion"
-import {cardImage, heading, subText, viewport} from "../animation/animation"
-import { RiBuildingLine } from "react-icons/ri";
-import marineBoards from "../assets/product-images/marine-board-product-5.png"
+import { motion } from "framer-motion"
+import { heading, subText, viewport } from "../animation/animation"
 const products = [
   {
     name: "Iron Rods",
     description: "Premium TMT reinforcement bars designed for high-tensile strength and superior bond with concrete in structural foundations.",
     tags: ["Anti-corossive", "8mm-32mm"],
-    image: {src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779642844/steelbar-o_gqqnmp.png", alt: "Full length reinforcement bars"},
+    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779642844/steelbar-o_gqqnmp.png", alt: "Full length reinforcement bars" },
   },
   {
     name: "Cement",
     description: "High-performance Portland cement offering rapid hardening and extreme durability for load-bearing walls and slabs.",
     tags: ["Bulk supply", "Certified quality"],
-    image: {src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779642417/dangote_cement_dcbjho.png", alt: "50kg Dangote cement"}
+    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779642417/dangote_cement_dcbjho.png", alt: "50kg Dangote cement" }
   },
   {
     name: "Marine Boards",
     description: "Water-resistant, high-density plywood treated for coastal construction, formwork, and heavy-duty structural applications.",
     tags: ["Phenolic film", "18mm thickness"],
-    image: {src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779641826/marine-board_qrrurp.png", alt: "knl quality marine boards"}
+    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779641826/marine-board_qrrurp.png", alt: "knl quality marine boards" }
   },
   {
     name: "Binding Wires",
     description: "Built for secure reinforcement tying and dependable structural support.",
     tags: ["Multiple guages", "site delivery"],
-    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779160378/China_Wire_Mesh_wx0vxy.jpg", alt: "Bundles of binding wires"}
+    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779160378/China_Wire_Mesh_wx0vxy.jpg", alt: "Bundles of binding wires" }
   },
   {
     name: "Contruction Nails",
     description: "Strong and durable construction nails built for reliable fastening across a wide range of building applications",
     tags: ["Multiple sizes", "Bulk Orders"],
-    image: {src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779166234/wire-nail_eifvxa.png", alt: "construction nails of different sizes"}
+    image: { src: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779166234/wire-nail_eifvxa.png", alt: "construction nails of different sizes" }
   }
-];
-
-const brands = [
-  {
-    name: "Dangote 3X",
-    tag: "Premium",
-    desc: "High-strength cement, ideal for high-rise construction and structural integrity in unique projects.",
-  },
-  {
-    name: "BUA Cement",
-    tag: "Standard",
-    desc: "Versatile cement for general-purpose building and residential projects across regions.",
-  },
-  {
-    name: "Lafarge Elephant",
-    tag: "Trusted",
-    desc: "A trusted, reliable name in cement with consistent quality and high performance in tough conditions.",
-  },
 ];
 
 
 
 
 const Products = () => {
-  const {onRequestPrice} = useStateContext()
   return (
     <>
-      {/* <section className="section-padding bg-secondary">
-          <div className="container-narrow mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-              <div>
-                <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
-                  Our Premium Brands
-                </h2>
-                <p className="text-muted-foreground text-sm max-w-xl">
-                  We work only with the highest-grade 42.5N and 32.5N cement types for blocks, plastering, and heavy structural work.
-                </p>
-              </div>
-              <Button variant="outline" size="sm" className="w-fit">View all catalog</Button>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {brands.map((b) => (
-                <div key={b.name} className="bg-background border border-border rounded-xl overflow-hidden">
-                  <div className="aspect-video bg-muted flex items-center justify-center">
-                    <RiBuildingLine className="w-12 h-12 text-muted-foreground/40" />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="font-heading font-semibold text-foreground">{b.name}</h3>
-                      <span className="text-xs bg-secondary text-muted-foreground px-2 py-0.5 rounded">{b.tag}</span>
-                    </div>
-                    <p className="text-xs text-muted-foreground mb-3">{b.desc}</p>
-                    <a href="#" className="text-xs text-sky-500 font-medium hover:underline">
-                      Technical Specs →
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
+      <section id="products" className="section-padding bg-secondary">
+        <div className="container-narrow mx-auto">
+          <div className="text-center mb-12">
+            <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-3">
+              What We Supply
+            </motion.h2>
+            <hr className="w-20 mx-auto border-t-4 border-t-destructive mb-4"></hr>
+            <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
+              Reliable building materials for commercial, residential and large-scale construction projects across Nigeria. We ensure quality standard that stand the test of time
+            </motion.p>
           </div>
-        </section>  */}
-         <section id="products" className="section-padding bg-secondary">
-      <div className="container-narrow mx-auto">
-        <div className="text-center mb-12">
-          <motion.h2 variants={heading} initial="initial" whileInView="inView" viewport={viewport} className="font-heading text-3xl md:text-4xl font-semibold text-foreground mb-3">
-            What We Supply
-          </motion.h2>
-          <hr className="w-20 mx-auto border-t-4 border-t-destructive mb-4"></hr>
-          <motion.p variants={subText} initial="initial" whileInView="inView" viewport={viewport} className="text-muted-foreground text-sm md:text-base max-w-lg mx-auto">
-            Reliable building materials for commercial, residential and large-scale construction projects across Nigeria. We ensure quality standard that stand the test of time 
-          </motion.p>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-          {products.map(({ image, name, description, tags}, index) => (
-            <div
-              key={index}
-              className="bg-card border border-slate-300  overflow-hidden rounded-xl  w-full space-y-4"
-            >
-              <div className="bg-black/5 aspect-[4/3] ">
-                <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />  
-              </div>
-              <div className=" mt-4 p-4 space-y-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+            {products.map(({ image, name, description, tags }, index) => (
+              <div
+                key={index}
+                className="bg-card border border-slate-300  overflow-hidden rounded-xl  w-full space-y-4"
+              >
+                <div className="bg-black/5 aspect-[4/3] ">
+                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
+                </div>
+                <div className=" mt-4 p-4 space-y-3">
                   <p className="text-xl text-blue-800 font-semibold">{name}</p>
                   <p className="text-sm text-slate-600 ">{description}</p>
                   <div className="flex gap-6">
@@ -131,9 +72,9 @@ const Products = () => {
                     }
                   </div>
                   <hr className="border-t border-t-slate-300"></hr>
-                  <button className="text-destructive flex items-center gap-2 pb-4">Request price <RiArrowDropRightLine className=""/> </button>
-              </div>
-              {/* <div className="aspect-[4/3] overflow-hidden">
+                  <button className="text-destructive flex items-center gap-2 pb-4">Request price <RiArrowDropRightLine className="" /> </button>
+                </div>
+                {/* <div className="aspect-[4/3] overflow-hidden">
                 <motion.img
                   variants={cardImage}
                   initial="initial"
@@ -163,13 +104,13 @@ const Products = () => {
                     <FiArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Button>
               </div> */}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
-   
+
   );
 };
 

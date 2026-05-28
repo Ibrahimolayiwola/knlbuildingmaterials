@@ -1,22 +1,9 @@
-import { useState } from "react";
 import { RiTruckLine } from "react-icons/ri";
 import { RiBuildingLine } from "react-icons/ri";
 import { GoShieldCheck } from "react-icons/go";
 import { LuPackageCheck } from "react-icons/lu";
 import { BsCheckCircle } from "react-icons/bs";
-import { PiMapPinAreaLight } from "react-icons/pi";
 import { FiAlertCircle } from "react-icons/fi";
-import { CgChevronDownO } from "react-icons/cg";
-import {
-  Truck,
-  Building2,
-  ShieldCheck,
-  PackageCheck,
-  CheckCircle2,
-  MapPin,
-  AlertCircle,
-  ChevronDown,
-} from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "../components/ui/button";
@@ -45,23 +32,23 @@ const pricingRows = [
   { brand: "Dangote Block", price: "₦7,400", availability: "", trend: "+1.4%", up: true },
 ];
 
-const brands = [
-  {
-    name: "Dangote 3X",
-    tag: "Premium",
-    desc: "High-strength cement, ideal for high-rise construction and structural integrity in unique projects.",
-  },
-  {
-    name: "BUA Cement",
-    tag: "Standard",
-    desc: "Versatile cement for general-purpose building and residential projects across regions.",
-  },
-  {
-    name: "Lafarge Elephant",
-    tag: "Trusted",
-    desc: "A trusted, reliable name in cement with consistent quality and high performance in tough conditions.",
-  },
-];
+// const brands = [
+//   {
+//     name: "Dangote 3X",
+//     tag: "Premium",
+//     desc: "High-strength cement, ideal for high-rise construction and structural integrity in unique projects.",
+//   },
+//   {
+//     name: "BUA Cement",
+//     tag: "Standard",
+//     desc: "Versatile cement for general-purpose building and residential projects across regions.",
+//   },
+//   {
+//     name: "Lafarge Elephant",
+//     tag: "Trusted",
+//     desc: "A trusted, reliable name in cement with consistent quality and high performance in tough conditions.",
+//   },
+// ];
 
 const deliveryAreas = [
   "Ikeja & Environs",

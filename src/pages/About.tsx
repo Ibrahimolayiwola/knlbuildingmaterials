@@ -5,8 +5,6 @@ import { GoDiamond } from "react-icons/go";
 import { PiHandshake } from "react-icons/pi";
 import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import cceccLogo from "../assets/ccecc.png";
-import telisolLogo from "../assets/telisolLogo.png";
 import { motion } from "framer-motion"
 import { card, heading, hero, subText, cardImage, button, viewport, heroButton } from "../animation/animation";
 import steelBar from "../assets/steelbar3.jpg"
@@ -35,24 +33,7 @@ const coreValues = [
   }
 ];
 
-const milestones = [
-  {
-    year: "2010",
-    description: "Founded as a local steel supplier."
-  },
-  {
-    year: "2015",
-    description: "Expanded operations, serving different states across Nigeria."
-  },
-  {
-    year: "2020",
-    description: "Became one of the most trusted steel supply in Nigeria."
-  },
-  {
-    year: "2025",
-    description: "Celebrated 15 years of industry leadership and innovation."
-  }
-];
+
 
 const testimonials = [
   {
@@ -67,9 +48,6 @@ const testimonials = [
   }
 ];
 
-const partnerLogos = [
-  cceccLogo, telisolLogo, "https://res.cloudinary.com/dejzdypyf/image/upload/v1773707362/BDEL-1_wfuefk.png",
-]
 
 const partners = [
   {
