@@ -60,13 +60,13 @@ const Hero = () => {
                   Reliable supply of steel, cement, marine boards, and other construction materials for contractors, builders and developers.
                 </motion.p>
                 <div className="flex flex-col sm:flex-row gap-3  animate-fade-in" >
-                  <Link to="/products">
-                    <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} className="max-sm:w-full  text-slate-100 bg-primary border-2 border-primary rounded-xl p-6 ">
+                  <Link to="#products">
+                    <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} className="max-sm:w-full  text-slate-100 bg-primary border-2 border-primary rounded-xl p-6 hover:bg-primary-light">
                       Explore Products
                     </MotionButton>
                   </Link>
                   <Link to="/contact" >
-                    <MotionButton variants={heroButton} initial="initial_r" animate="animate" viewport={viewport} className="max-sm:w-full  bg-transparent text-destructive border-2 border-destructive hover:bg-destructive hover:text-destructive-foreground rounded-xl p-6">
+                    <MotionButton variants={heroButton} initial="initial_r" animate="animate" viewport={viewport} className="max-sm:w-full  bg-transparent text-accent border-2 border-accent hover:bg-accent hover:text-destructive-foreground rounded-xl p-6">
                       Contact Us
                     </MotionButton>
                   </Link>

@@ -11,8 +11,6 @@ import steelBar from "../assets/steelbar3.jpg"
 import { FiTarget } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
 import MD from "../assets/MD.jpg"
-import OpManager from "../assets/op-manager.jpg"
-import secretory from "../assets/secretory.jpg"
 
 
 const coreValues = [
@@ -102,6 +100,39 @@ const partners = [
   },
 ]
 
+const team = [
+  {
+    name: "Olapade Ibrahim Oladapo",
+    position: "Operations manager",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1780134160/op-manager_crhrff.jpg"
+  },
+  {
+    name: "Micheal Modupe Victoria",
+    position: "Assistant secretory",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1779711330/IMG-20260517-WA0033_fdx7e5.jpg"
+  },
+   {
+    name: "Abideen Lukmon",
+    position: "Manager",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1780521227/IMG-20260603-WA0008_qrigax.jpg"
+  },
+   {
+    name: "AbdulRasheed Azizat Olabisi",
+    position: "senior secretory",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1780521259/IMG-20260603-WA0009_caztyy.jpg"
+  },
+   {
+    name: "Afolabi Olamilekan Yusuf",
+    position: "Procurement manager",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1780521155/IMG-20260603-WA0010_r9p2km.jpg"
+  },
+   {
+    name: "Olasheu Rafat Busola",
+    position: "secretary",
+    img: "https://res.cloudinary.com/dejzdypyf/image/upload/v1780521289/IMG-20260603-WA0011_zmmo5r.jpg"
+  }
+]
+
 const About = () => {
   return (
     <div className="min-h-screen mx-auto">
@@ -129,12 +160,12 @@ const About = () => {
             </motion.p>
             <div className="flex flex-col sm:flex-row gap-3  animate-fade-in" >
               <Link to="/products">
-                <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} className="max-sm:w-full  text-slate-100 bg-primary border-2 border-primary rounded-xl p-6 ">
+                <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} className="max-sm:w-full  text-slate-100 bg-primary border-2 border-primary hover:bg-primary-light rounded-xl p-6 ">
                   Explore Products
                 </MotionButton>
               </Link>
               <Link to="/contact" >
-                <MotionButton variants={heroButton} initial="initial_r" animate="animate" viewport={viewport} className="max-sm:w-full  bg-transparent text-destructive border-2 border-destructive hover:bg-destructive hover:text-destructive-foreground rounded-xl p-6">
+                <MotionButton variants={heroButton} initial="initial_r" animate="animate" viewport={viewport} className="max-sm:w-full  bg-transparent text-accent border-2 border-accent hover:bg-accent hover:text-destructive-foreground rounded-xl p-6">
                   Contact Us
                 </MotionButton>
               </Link>
@@ -199,33 +230,19 @@ const About = () => {
           <hr className="border-t-4 border-t-accent w-16 mx-auto mb-6" />
           <p className=" text-slate-600 text-center mt-4 mb-6 max-w-3xl mx-auto">A diverse team of marketers, logistics experts, and customer advocates working tirelessly to ensure you get the right materials at the right time for your building and construction projects</p>
           <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-6">
-            <div className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl max-sm:max-w-[350px] sm:w-[350px] ">
-              <div>
-                <img src={OpManager} alt="operations manager" className="w-full h-full aspect-square" />
-              </div>
-              <div className="p-6 text-center flex flex-col justify-center gap-4">
-                <p className="p-2 border-2 border-accent text-accent font-semibold uppercase rounded-lg">Operations manager</p>
-                <p className="uppercase text-lg font-bold text-primary">Olapade Ibrahim Oladapo</p>
-              </div>
-            </div>
-            <div className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl max-sm:max-w-[350px] sm:w-[350px] ">
-              <div>
-                <img src={secretory} alt="operations manager" className="w-full h-full aspect-square" />
-              </div>
-              <div className="p-6 text-center flex flex-col justify-center gap-4">
-                <p className="p-2 border-2 border-accent text-accent font-semibold uppercase rounded-lg">Assitant secretory</p>
-                <p className="uppercase text-lg font-bold text-primary">Micheal Modupe Victoria</p>
-              </div>
-            </div>
-            <div className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl max-sm:max-w-[350px] sm:w-[350px] ">
-              <div>
-                <img src={OpManager} alt="operations manager" className="w-full h-full aspect-square" />
-              </div>
-              <div className="p-6 text-center flex flex-col justify-center gap-4">
-                <p className="p-2 border-2 border-accent text-accent font-semibold uppercase rounded-lg">Operations manager</p>
-                <p className="uppercase text-lg font-bold text-primary">Surname Name</p>
-              </div>
-            </div>
+            {
+              team.map(({ name, position, img }, i) => (
+                <div key={i} className="w-full bg-white rounded-2xl overflow-hidden shadow-2xl max-sm:max-w-[350px] sm:w-[350px] ">
+                  <div>
+                    <img src={img} alt={name} className="w-full h-full aspect-square" />
+                  </div>
+                  <div className="p-6 text-center flex flex-col justify-center gap-4">
+                    <p className="p-2 border-2 border-accent text-accent font-semibold uppercase rounded-xl">{position}</p>
+                    <p className="uppercase text-lg font-bold text-primary">{name}</p>
+                  </div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </section>
@@ -242,7 +259,7 @@ const About = () => {
                 <div className="aspect-[4/3] mx-auto w-[150px]  ">
                   <img src={logo} alt={`${name} logo`} className="w-full h-full object-container" />
                 </div>
-                <hr className="mx-4 my-2 border-t-2 border-t-accent"/>
+                <hr className="mx-4 my-2 border-t-2 border-t-accent" />
                 <p>{name}</p>
                 <p className="text-accent">{role}</p>
               </div>
@@ -282,17 +299,17 @@ const About = () => {
         </div>
       </section>
 
-      
 
-     
-      
+
+
+
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-20 px-4 bg-muted/50">
         <div className="container mx-auto max-w-4xl">
-         <p className="uppercase text-accent font-bold text-xs mb-3 text-center">Testimonials</p>
-        <h3 className="capitalize font-bold text-3xl md:text-4xl text-foreground mb-2 text-center">What Our Clients' Say</h3>
-        <hr className="border-t-4 border-t-accent w-16 mx-auto mb-6" />
+          <p className="uppercase text-accent font-bold text-xs mb-3 text-center">Testimonials</p>
+          <h3 className="capitalize font-bold text-3xl md:text-4xl text-foreground mb-2 text-center">What Our Clients' Say</h3>
+          <hr className="border-t-4 border-t-accent w-16 mx-auto mb-6" />
           <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <motion.div variants={cardImage} initial="initial" whileInView="inView" key={index} viewport={viewport} className="bg-card border border-border rounded-lg p-6">
@@ -319,7 +336,7 @@ const About = () => {
             Contact us today to discuss your project requirements and discover how KNL can support your success.
           </motion.p>
           <Link to="/contact">
-            <MotionButton variants={button} initial="initial" whileInView="inView" viewport={viewport} className="bg-transparent border-2 border-accent hover:bg-accent/90 text-accent hover:text-white px-8">
+            <MotionButton variants={button} initial="initial" whileInView="inView" viewport={viewport} className="bg-transparent border-2 border-accent hover:bg-accent text-accent hover:text-white px-8 py-6 rounded-xl">
               Request a Quote
             </MotionButton>
           </Link>

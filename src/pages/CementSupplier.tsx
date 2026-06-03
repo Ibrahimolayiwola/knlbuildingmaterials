@@ -109,8 +109,8 @@ const CementSupplier = () => {
                   Direct distribution to your site. We aim to be the middleman so you get the best daily market rates on Dangote, BUA, and Lafarge cement.
                 </p>
                 <div className="flex flex-wrap gap-3 mb-6">
-                  <Button className="bg-primary hover:bg-primary-light  text-white" onClick={() => onRequestPrice()}>Get Today's Price</Button>
-                  <Button variant="outline" className="border-destructive text-accent hover:bg-accent hover:text-destructive-foreground">
+                  <Button className="bg-primary hover:bg-primary-light  text-primary-foreground p-6 rounded-xl" onClick={() => onRequestPrice()}>Get Today's Price</Button>
+                  <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-destructive-foreground p-6 rounded-xl">
                     Contact Sales
                   </Button>
                 </div>
@@ -350,7 +350,7 @@ const CementSupplier = () => {
 
         {/* CTA */}
         <section className="px-4 py-12 md:py-16 mb-6 ">
-          <div className="container-narrow mx-auto p-8 bg-primary rounded-2xl flex flex-col md:flex-row items-center md:items-center justify-between gap-6">
+          <div className="container-narrow mx-auto p-8 bg-primary rounded-2xl flex flex-col gap-6 justify-center items-center">
             <div className="text-muted-foreground">
               <h2 className="font-heading text-3xl text-primary-foreground md:text-3xl font-bold mb-2">
                 Ready to Start Your Next Project?
@@ -360,8 +360,8 @@ const CementSupplier = () => {
               </p>
             </div>
             <div className="flex gap-3 flex-shrink-0">
-              <Button className="bg-accent  border-muted hover:bg-accent text-white/90 hover:text-white " onClick={() => onRequestPrice()}>Get Today's Price</Button>
-              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground">
+              <Button className="bg-accent  border-muted hover:bg-accent text-white/90 hover:text-white rounded-xl p-6" onClick={() => onRequestPrice()}>Get Today's Price</Button>
+              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-primary-foreground rounded-xl p-6">
                 Contact Sales
               </Button>
             </div>

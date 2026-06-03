@@ -4,8 +4,7 @@ import { FiMapPin } from "react-icons/fi";
 import { FiFacebook } from "react-icons/fi";
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Logo from "../assets/knl-logo-2.png";
-
+ const logo = "https://res.cloudinary.com/dejzdypyf/image/upload/v1779468125/2nd_logo_xr6yh1.png"
 const Footer = () => {
     return (
         <footer id="contact" className="bg-black text-primary-foreground">
@@ -15,7 +14,7 @@ const Footer = () => {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <Link to="/" className="flex items-center gap-2">
-                                <img src={Logo} alt="KNL logo" width={120} height={40} />
+                                <img src={logo} alt="KNL logo" width={120} height={40} />
                             </Link>
                         </div>
                         <p className="text-primary-foreground/70 text-sm">

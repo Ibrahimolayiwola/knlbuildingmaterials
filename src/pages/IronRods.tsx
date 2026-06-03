@@ -17,36 +17,6 @@ const IronRods = () => {
         <div className="bg-background">
             <Header />
             <div className="min-h-screen bg-background max-w-7xl mx-auto">
-                {/* <section className="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center">
-                
-                <div className="absolute inset-0">
-                    <img src={IronRod} alt="Iron rod" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-foreground/40"></div>
-                </div>
-                <div>
-                    <motion.h1 variants={hero} initial="initial" animate="animate_h" viewport={viewport} className="font-heading text-2xl md:text-4xl lg:text-5xl font-semibold text-primary-foreground mb-4 max-w-2xl mx-auto leading-auto animate-fade-in text-center">
-                        Quality Iron Rods in Lagos at Competitive Prices
-                    </motion.h1>
-                    <motion.p variants={hero} initial="initial" animate="animate_p" viewport={viewport} className="text-primary-foreground/80 text-sm lg:text-base max-w-xl mx-auto mb-8 mt-4 animate-fade-in text-center" >
-                        We supply durable iron rods in lagos. Available in all sizes including 8mm, 10mm, 12mm, 16mm, and 20mm
-                    </motion.p>
-                    <div className="px-6  flex flex-col sm:flex-row gap-3 justify-center animate-fade-in" >
-                        <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full bg-primary hover:bg-accent text-primary-foreground">
-                            Get current price
-                        </MotionButton>
-                        <Link to="/products" >
-                            <MotionButton variants={heroButton} initial="initial_r" animate="animate" variant="outline" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full border-primary-foreground/30 text-destructive-foreground bg-destructive hover:bg-destructive/90">
-                                View products
-                            </MotionButton>
-                        </Link>
-                    </div>
-                </div>
-            </section>
-            {
-                openModal && (
-                    <RequestPrice />
-                )
-            } */}
                 <div className="pt-8 px-4 lg:flex justify-center items-center gap-10 space-y-10">
                     <div className="space-y-6 lg:max-w-3xl flex-1">
                         <p className="uppercase font-semibold text-xs md:text-sm text-destructive">Iron rods supply</p>
@@ -57,11 +27,11 @@ const IronRods = () => {
 
                             Whether you’re a contractor, builder, or individual working on a project, we provide reliable supply and fast delivery across Lagos to ensure your work continues without delay.</p>
                         <div className="flex flex-col sm:flex-row gap-3 animate-fade-in" >
-                            <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full bg-primary hover:bg-accent text-primary-foreground">
+                            <MotionButton variants={heroButton} initial="initial_l" animate="animate" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full bg-primary hover:bg-primary-light text-primary-foreground rounded-xl p-6">
                                 Get current price
                             </MotionButton>
-                            <Link to="/products" >
-                                <MotionButton variants={heroButton} initial="initial_r" animate="animate" variant="outline" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full border-primary-foreground/30 text-destructive-foreground bg-destructive hover:bg-destructive/90">
+                            <Link to="/" >
+                                <MotionButton variants={heroButton} initial="initial_r" animate="animate" variant="outline" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full border-2 border-accent text-accent p-6 rounded-xl ">
                                     View products
                                 </MotionButton>
                             </Link>
@@ -131,12 +101,12 @@ const IronRods = () => {
             </div>
             {/* Call to action  */}
             <div className="px-4">
-                <div className="my-[7.5rem] max-w-7xl mx-auto bg-slate-200 flex flex-col justify-center items-center gap-6 rounded-3xl border border-primary p-8">
+                <div className="my-[7.5rem] max-w-7xl mx-auto bg-primary flex flex-col justify-center items-center gap-6 rounded-3xl  p-8">
                 <div>
-                    <h3 className="text-2xl md:text-3xl lg:text-4xl text-center max-w-xl mx-auto font-heading font-semibold text-foreground mb-4">Get the Latest Iron rod prices and fast delivery across Nigeria</h3>
-                <p className="text-center text-slate-600 max-w-xl mx-auto">We source directly from major manufacturers and ensure door step delivery to your contruction site</p>
+                    <h3 className="text-2xl md:text-3xl lg:text-4xl text-center max-w-xl mx-auto font-heading font-semibold text-primary-foreground mb-4">Get the Latest Iron rod prices and fast delivery across Nigeria</h3>
+                <p className="text-center text-primary-foreground max-w-xl mx-auto">We source directly from major manufacturers and ensure door step delivery to your contruction site</p>
                 </div>
-                <MotionButton variants={heroButton} initial="initial_r" animate="animate" variant="outline" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full px-4 border-primary-foreground/30 text-destructive-foreground bg-destructive hover:bg-destructive/90">
+                <MotionButton variants={heroButton} initial="initial_r" animate="animate" variant="outline" viewport={viewport} onClick={() => onRequestPrice()} className="max-sm:w-full p-6 border-2 border-accent  text-accent  rounded-xl">
                   Request Price <IoIosArrowRoundForward className="mr-2" />
                 </MotionButton>
             </div>

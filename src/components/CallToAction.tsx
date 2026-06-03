@@ -14,7 +14,7 @@ const CallToAction = () => {
         <motion.p variants={subText} initial="initial" whileInView="inView" className="text-primary-foreground text-sm md:text-base max-w-lg mx-auto mb-8">
          Choose KNL Building Materials for a reliable construction materials with proven quality and responsive support.
         </motion.p>
-        <MotionButton variants={button} initial="initial" whileInView="inView" className="bg-transparent text-destructive border-2 border-destructive hover:bg-destructive hover:text-destructive-foreground">
+        <MotionButton variants={button} initial="initial" whileInView="inView" className="bg-transparent text-accent border-2 border-accent rounded-xl hover:bg-accent hover:text-destructive-foreground p-6">
           Start Your Project Today
           <FiArrowRight className="w-4 h-4 ml-2" />
         </MotionButton>

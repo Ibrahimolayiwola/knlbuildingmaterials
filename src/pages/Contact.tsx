@@ -71,7 +71,7 @@ company: ${company}
     <div className="min-h-screen bg-background">
       <Header />
 
-      <main className="pt-16">
+      <main className="">
         <section className="section-padding">
           <div className="container-narrow mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
