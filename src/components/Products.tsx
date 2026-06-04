@@ -1,6 +1,8 @@
 import { RiArrowDropRightLine } from "react-icons/ri";
 import { motion } from "framer-motion"
 import { heading, subText, viewport } from "../animation/animation"
+import { useStateContext } from "../context/StateContext";
+import RequestPrice from "./RequestPrice";
 const products = [
   {
     name: "Iron Rods",
@@ -38,6 +40,7 @@ const products = [
 
 
 const Products = () => {
+  const {openModal, onRequestPrice} = useStateContext()
   return (
     <>
       <section id="products" className="section-padding bg-secondary">
@@ -72,7 +75,7 @@ const Products = () => {
                     }
                   </div>
                   <hr className="border-t border-t-slate-300"></hr>
-                  <button className="text-destructive flex items-center gap-2 pb-4">Request price <RiArrowDropRightLine className="" /> </button>
+                  <button className="text-destructive flex items-center gap-2 pb-4" onClick={() => onRequestPrice()}>Request price <RiArrowDropRightLine className="" /> </button>
                 </div>
                 {/* <div className="aspect-[4/3] overflow-hidden">
                 <motion.img
@@ -107,6 +110,9 @@ const Products = () => {
               </div>
             ))}
           </div>
+          {
+            openModal && <RequestPrice />
+          }
         </div>
       </section>
     </>
