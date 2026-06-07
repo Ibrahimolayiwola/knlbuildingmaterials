@@ -67,8 +67,8 @@ Delivery date: ${deliveryDate}
     };
 
     return (
-        <div className="fixed overflow-y-auto inset-0  bg-black/50  top-0 z-20 flex justify-center items-center min-h-screen ">
-            <form onSubmit={handleSubmit} className="w-[500px] md:w-[650px] lg:w-[800px] p-8 bg-white rounded-lg shadow-md space-y-4 overflow-y-scroll">
+        <div className="fixed overflow-y-auto inset-0  bg-black/50  top-0 z-20 flex justify-center items-center min-h-screen px-4">
+            <form onSubmit={handleSubmit} className="w-full max-md:max-w-[500px] md:w-[650px] lg:w-[800px] p-8 bg-white rounded-lg shadow-md space-y-4 overflow-y-scroll">
                 <h2 className="text-center text-destructive font-semibold">Request Price</h2>
                 <div className="mb-2">
                     <label htmlFor="productName" >Product name</label>
