@@ -12,7 +12,7 @@ const RequestPrice = () => {
 
     const [priceRequestInfo, setPriceRequestInfo] = useState({
         customerName: "",
-        productName: productName,
+        productName: "",
         quantity: "",
         unit: "",
         location: "",

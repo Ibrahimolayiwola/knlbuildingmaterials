@@ -15,8 +15,8 @@ const Header = () => {
     { label: "Contact", href: "/contact" },
   ];
   const productLinks = [
-    {label: "Cement", href: "/products/cement-supplier"},
-    {label: "Iron rods", href: "/products/iron-rods-lagos"},
+    { label: "Cement", href: "/products/cement-supplier" },
+    { label: "Iron rods", href: "/products/iron-rods-lagos" },
   ]
 
   return (
@@ -35,8 +35,8 @@ const Header = () => {
                 key={link.label}
                 to={link.href}
                 className={`text-sm font-medium transition-colors pb-1${location.pathname === link.href
-                    ? "text-primary border-b border-b-primary"
-                    : "text-foreground hover:border-b hover:border-b-primary"
+                  ? "text-primary border-b border-b-primary"
+                  : "text-foreground hover:border-b hover:border-b-primary"
                   }`}
               >
                 {link.label}
@@ -49,18 +49,18 @@ const Header = () => {
                 {
                   productLinks.map((link) => (
                     <Link
-                key={link.label}
-                to={link.href}
-                className={`text-sm font-medium transition-colors pb-1 inline-block ${location.pathname === link.href
-                    ? "text-primary border-b border-b-primary"
-                    : "text-foreground hover:border-b hover:border-b-primary"
-                  }`}
-              >
-                {link.label}
-              </Link>
+                      key={link.label}
+                      to={link.href}
+                      className={`text-sm font-medium transition-colors pb-1 inline-block ${location.pathname === link.href
+                        ? "text-primary border-b border-b-primary"
+                        : "text-foreground hover:border-b hover:border-b-primary"
+                        }`}
+                    >
+                      {link.label}
+                    </Link>
                   ))
                 }
-                 
+
               </div>
             </div>
 
@@ -96,8 +96,8 @@ const Header = () => {
                   key={link.label}
                   to={link.href}
                   className={`text-xl font-medium transition-colors cursor-pointer flex gap-6 justify-center items-center ${location.pathname === link.href
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
                     }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -105,6 +105,30 @@ const Header = () => {
                   <IoIosArrowForward />
                 </Link>
               ))}
+
+              <div className="relative group flex flex-col justify-center items-center gap-6">
+                <p className="text-center text-xl font-medium transition-colors cursor-pointer flex gap-6 justify-center items-center">Products <IoIosArrowForward /></p>
+
+                <div className=" space-y-4 hidden  group-hover:block">
+                  {
+                    productLinks.map((link) => (
+                      <Link
+                        key={link.label}
+                        to={link.href}
+                        className={`text-xl font-medium transition-colors cursor-pointer flex gap-6 justify-center items-center ${location.pathname === link.href
+                          ? "text-primary"
+                          : "text-foreground hover:text-primary"
+                          }`}
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {link.label}
+                        <IoIosArrowForward />
+                      </Link>
+                    ))
+                  }
+
+                </div>
+              </div>
 
             </div>
           </nav>
