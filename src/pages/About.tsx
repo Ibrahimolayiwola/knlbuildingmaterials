@@ -7,10 +7,11 @@ import { FiUsers } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 import { card, heading, hero, subText, cardImage, button, viewport, heroButton } from "../animation/animation";
-import steelBar from "../assets/steelbar3.jpg"
 import { FiTarget } from "react-icons/fi";
 import { FiEye } from "react-icons/fi";
-import MD from "../assets/MD.jpg"
+
+
+const mdImage = "https://res.cloudinary.com/dejzdypyf/image/upload/v1781002348/IMG-20260517-WA0034_shpfxg.jpg"
 
 
 const coreValues = [
@@ -200,7 +201,7 @@ const About = () => {
             </div>
           </div>
           <div className="aspect-square w-full overflow-hidden rounded-2xl border-8 border-4-white/90 ">
-            <img src={steelBar} alt="steel bar in a warehouse" className="w-full h-full object-cover" />
+            <img src="https://res.cloudinary.com/dejzdypyf/image/upload/v1779158873/Metal_construction_rumycs.jpg" alt="steel bar in a warehouse" className="w-full h-full object-cover" />
           </div>
         </div>
       </section>
@@ -210,7 +211,7 @@ const About = () => {
         <div className="border-t-4 border-t-accent w-16 mx-auto" />
         <div className="bg-primary rounded-3xl mt-8 p-6 lg:flex gap-10 items-center">
           <div className="w-full md:w-[500px] rounded-2xl overflow-hidden mx-auto p-8 lg:w-[450px] aspect-[3/4]">
-            <img src={MD} alt="the MD" className="w-full h-full object-cover rounded-2xl " />
+            <img src={mdImage} alt="the MD" className="w-full h-full object-cover rounded-2xl " />
           </div>
           <div className="space-y-6 flex-1 p-8">
             <span className="px-4 py-2 text-white border-2 border-accent rounded-2xl text-xs">Leadership Message</span>

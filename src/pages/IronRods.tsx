@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import IronRod from "../assets/product-images/visily-iron-rod.png"
 import Header from "../components/Header"
 import { MotionButton } from "../components/ui/button"
 import {heroButton, viewport } from "../animation/animation"
@@ -11,6 +10,9 @@ import { GoShieldCheck } from "react-icons/go";
 import { CiCalendarDate } from "react-icons/ci";
 import Footer from "../components/Footer"
 import { IoIosArrowRoundForward } from "react-icons/io";
+const IronRodImg = "https://res.cloudinary.com/dejzdypyf/image/upload/v1781002600/visily-iron-rod-image_oa8iqd.png";
+
+
 const IronRods = () => {
     const { onRequestPrice, openModal } = useStateContext()
     return (
@@ -44,7 +46,7 @@ const IronRods = () => {
                         </div>
                     </div>
                     <div className="w-full lg:w-[450px] aspect-square bg-slate-200 shadow-lg rounded-xl overflow-hidden">
-                        <img src={IronRod} alt="iron rod" className="w-full h-full object-cover" />
+                        <img src={IronRodImg} alt="iron rod" className="w-full h-full object-cover" />
                     </div>
                 </div>
                 <div className="pt-[7.5rem] space-y-6 px-4">
@@ -71,11 +73,11 @@ const IronRods = () => {
                                 {/* Table Body */}
                                 <tbody className="divide-y">
                                     {[
-                                        { size: "8mm", type: "TMT", price: "₦X – ₦X" },
-                                        { size: "10mm", type: "Lion", price: "₦X – ₦X" },
-                                        { size: "12mm", type: "Local", price: "₦X – ₦X" },
-                                        { size: "16mm", type: "LCI", price: "₦X – ₦X" },
-                                        { size: "20mm", type: "Tiger", price: "₦X – ₦X" },
+                                        { size: "8mm", type: "TMT", price: "₦830,000 – ₦1,300,000" },
+                                        { size: "10mm", type: "Lion", price: "₦900,000 – ₦1,400,000" },
+                                        { size: "12mm", type: "Local", price: "₦770,000 – ₦880,000" },
+                                        { size: "16mm", type: "LCI", price: "₦920,000 – ₦1,250,000" },
+                                        { size: "20mm", type: "Tiger", price: "₦950,000 – ₦1,400,000" },
                                     ].map((item, index) => (
                                         <tr key={index} className="hover:bg-gray-50">
                                             <td className="p-4 text-gray-800 font-medium">{item.size}</td>
